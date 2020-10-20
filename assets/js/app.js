@@ -387,6 +387,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("info-survey").style.display = "none";
     document.getElementById("info-survey-two").style.display = "block";
+    window.scrollTo(0, 0);
   }
 
   for (let i = 0; i < khEthRadios.length; i++) {
