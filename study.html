@@ -454,12 +454,12 @@
                   </div>
                 </div>
               </div>
-              <div class="row justify-content-center">
-                <h4 class="col-12 col-sm-6 text-center">
+              <div class="row justify-content-center pt-3">
+                <h5 class="col-12 col-sm-6 text-center">
                   Use the sliding scales to indicate the extent to which you
                   personally view Kamala Harris to be a member of each of the
                   racial or ethnic groups.
-                </h4>
+                </h5>
               </div>
               <div class="row justify-content-center">
                 <div class="col-12 col-sm-6 col-sm-offset-3">
@@ -599,12 +599,12 @@
                   </div>
                 </div>
               </div>
-              <div class="row justify-content-center">
-                <h4 class="col-12 col-sm-6 text-center">
+              <div class="row justify-content-center pt-3">
+                <h5 class="col-12 col-sm-6 text-center">
                   Use the sliding scales to indicate the extent to which you
                   personally view Elizabeth Warren to be a member of each of the
                   racial or ethnic groups.
-                </h4>
+                </h5>
               </div>
               <div class="row justify-content-center">
                 <div class="col-12 col-sm-6 col-sm-offset-3">
@@ -744,12 +744,12 @@
                   </div>
                 </div>
               </div>
-              <div class="row justify-content-center">
-                <h4 class="col-12 col-sm-6 text-center">
+              <div class="row justify-content-center pt-3">
+                <h5 class="col-12 col-sm-6 text-center">
                   Use the sliding scales to indicate the extent to which you
                   personally view Condoleezza Rice to be a member of each of the
                   racial or ethnic groups.
-                </h4>
+                </h5>
               </div>
               <div class="row justify-content-center">
                 <div class="col-12 col-sm-6 col-sm-offset-3">
@@ -834,22 +834,15 @@
 
       <div id="info-survey-three" style="display: none">
         <div class="row justify-content-center">
-          <div class="col-12">
-            <h3 class="font-weight-bold text-center">
-              Please fill out the survey below:
-            </h3>
-          </div>
-        </div>
-        <div class="row justify-content-center">
           <div class="col-12 col-sm-6">
             <form id="survey-three">
               <div class="row justify-content-center">
                 <div class="form-group">
-                  <label for="ancestry-info"
+                  <label class="font-weight-bold" for="ancestry-info"
                     >We are interested in what you might know about Kamala
                     Harris's ancestry. Please tell us anything you may have
                     heard about her ancestry here, keeping in mind that you do
-                    not have to be cerain about whether the information is
+                    not have to be certain about whether the information is
                     true.</label
                   >
                   <textarea
@@ -857,69 +850,6 @@
                     id="ancestry-info"
                     rows="4"
                   ></textarea>
-                </div>
-              </div>
-              <div class="row justify-content-center">
-                <h4 class="col-12 col-sm-6 text-center">
-                  On a 1-7 scale, indicate how much each of the following affect
-                  your decision to classify an individual as multiracial.
-                </h4>
-              </div>
-              <div class="row justify-content-center">
-                <div class="col-12 col-sm-6 col-sm-offset-3">
-                  <div class="form-group">
-                    <label for="ancestry">Ancestry</label>
-                    <input
-                      type="range"
-                      min="0"
-                      max="7"
-                      value="0"
-                      class="form-control-range scale"
-                      id="ancestry"
-                    />
-                    <input
-                      type="text"
-                      id="ancestry-out"
-                      placeholder="0"
-                      readonly
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="appearance"
-                      >Appearance or physical features</label
-                    >
-                    <input
-                      type="range"
-                      min="0"
-                      max="7"
-                      value="0"
-                      class="form-control-range scale"
-                      id="appearance"
-                    />
-                    <input
-                      type="text"
-                      id="appearance-out"
-                      placeholder="0"
-                      readonly
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="identifies">How the person identifies</label>
-                    <input
-                      type="range"
-                      min="0"
-                      max="7"
-                      value="0"
-                      class="form-control-range scale"
-                      id="identifies"
-                    />
-                    <input
-                      type="text"
-                      id="identifies-out"
-                      placeholder="0"
-                      readonly
-                    />
-                  </div>
                 </div>
               </div>
               <div class="row">
@@ -942,14 +872,93 @@
       <div id="info-survey-four" style="display: none">
         <div class="row justify-content-center">
           <div class="col-12 col-sm-6">
-            <h3 class="font-weight-bold text-center">
-              Please fill out the survey below:
-            </h3>
+            <form id="survey-four">
+              <div class="row justify-content-center">
+                <h5 class="text-center">
+                  Use the scale below to indicate how much each of the follow
+                  features affects your decision to classify an individual as
+                  multiracial (1 = Does not affect my decision; 7 = Greatly
+                  affects my decision).
+                </h5>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="ancestry">Ancestry</label>
+                    <input
+                      type="range"
+                      min="1"
+                      max="7"
+                      value="1"
+                      class="form-control-range scale"
+                      id="ancestry"
+                    />
+                    <input
+                      type="text"
+                      id="ancestry-out"
+                      placeholder="0"
+                      readonly
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="appearance"
+                      >Appearance or physical features</label
+                    >
+                    <input
+                      type="range"
+                      min="1"
+                      max="7"
+                      value="1"
+                      class="form-control-range scale"
+                      id="appearance"
+                    />
+                    <input
+                      type="text"
+                      id="appearance-out"
+                      placeholder="0"
+                      readonly
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="identifies">How the person identifies</label>
+                    <input
+                      type="range"
+                      min="1"
+                      max="7"
+                      value="1"
+                      class="form-control-range scale"
+                      id="identifies"
+                    />
+                    <input
+                      type="text"
+                      id="identifies-out"
+                      placeholder="0"
+                      readonly
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col text-center">
+                  <button
+                    id="submit-survey-four"
+                    type="submit"
+                    class="btn-lg btn-secondary text-center"
+                    disabled
+                  >
+                    Continue
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
+      </div>
+
+      <div id="info-survey-five" style="display: none">
         <div class="row justify-content-center">
           <div class="col-12">
-            <form id="survey-four">
+            <form id="survey-five">
               <div class="row justify-content-center">
                 <h4 class="col-12 col-sm-6 text-center">
                   Indicate your political orientation using the scale below.
@@ -1057,7 +1066,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row justify-content-center">
+              <div class="row justify-content-center pt-3">
                 <h4 class="col-12 col-sm-6 text-center">
                   If the presidential election were today, who would you vote
                   for?
@@ -1104,7 +1113,7 @@
               <div class="row">
                 <div class="col text-center">
                   <button
-                    id="submit-survey-four"
+                    id="submit-survey-five"
                     type="submit"
                     class="btn-lg btn-secondary text-center"
                     disabled
@@ -1118,7 +1127,7 @@
         </div>
       </div>
 
-      <div id="info-survey-five" style="display: none">
+      <div id="info-survey-six" style="display: none">
         <div class="row justify-content-center">
           <div class="col-12 col-sm-6">
             <h3 class="font-weight-bold text-center">
@@ -1128,7 +1137,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-12">
-            <form id="survey-five">
+            <form id="survey-six">
               <div class="row justify-content-center">
                 <h4 class="col-12 col-sm-6 text-center">
                   Indicate your response to each item using the scale below.
@@ -1639,7 +1648,7 @@
               <div class="row">
                 <div class="col text-center">
                   <button
-                    id="submit-survey-five"
+                    id="submit-survey-six"
                     type="submit"
                     class="btn-lg btn-secondary text-center"
                     disabled

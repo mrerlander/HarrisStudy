@@ -320,6 +320,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let respectChecked = false;
   let survey5 = document.getElementById("survey-five");
   let buttonContinueFive = document.getElementById("submit-survey-five");
+  let survey6 = document.getElementById("survey-six");
+  let buttonContinueSix = document.getElementById("submit-survey-six");
 
   for (let i = 0; i < warrenRadios.length; i++) {
     warrenRadios[i].addEventListener("click", function (e) {
@@ -475,6 +477,23 @@ document.addEventListener("DOMContentLoaded", function () {
     survey3.style.display = "block";
   }
 
+  survey3.onsubmit = continueForm3;
+
+  function continueForm3(e) {
+    e.preventDefault();
+    
+    let ancestryInfo = document.getElementById("ancestry-info").value;
+
+    userSurvey.ancestryInfo = ancestryInfo;
+
+    buttonContinueThree.disabled = true;
+    buttonContinueFour.disabled = false;
+    survey3.style.display = "none";
+    survey4.style.display = "block";
+    document.getElementById("info-survey-three").style.display = "none";
+    document.getElementById("info-survey-four").style.display = "block";
+  }
+
   let scaleSliders = document.getElementsByClassName("scale");
 
   for (let i = 0; i < scaleSliders.length; i++) {
@@ -482,28 +501,30 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault;
       output = document.getElementById(this.id + "-out");
       output.setAttribute("placeholder", this.value);
+
     });
   }
 
-  survey3.onsubmit = continueForm3;
+  survey4.onsubmit = continueForm4;
 
-  function continueForm3(e) {
+  function continueForm4(e) {
     e.preventDefault();
+
     let ancestry = document.getElementById("ancestry").value;
     let appearance = document.getElementById("appearance").value;
     let identifies = document.getElementById("identifies").value;
-    let ancestryInfo = document.getElementById("ancestry-info").value;
 
-    userSurvey.ancestryInfo = ancestryInfo;
     userSurvey.ancestryVal = ancestry;
     userSurvey.appearanceVal = appearance;
     userSurvey.identifiesVal = identifies;
 
-    buttonContinueThree.disabled = true;
-    survey3.style.display = "none";
-    survey4.style.display = "block";
-    document.getElementById("info-survey-three").style.display = "none";
-    document.getElementById("info-survey-four").style.display = "block";
+    document.getElementById("info-survey-four").style.display = "none";
+    document.getElementById("info-survey-five").style.display = "block";
+
+    buttonContinueFour.disabled = true;
+    survey4.style.display = "none";
+    survey5.style.display = "block";
+
   }
 
   for (let i = 0; i < orientationRadios.length; i++) {
@@ -512,7 +533,7 @@ document.addEventListener("DOMContentLoaded", function () {
       orientationAnswer = this.value;
       orientationChecked = true;
       if (orientationChecked && presChecked) {
-        buttonContinueFour.disabled = false;
+        buttonContinueFive.disabled = false;
       }
     });
   }
@@ -523,25 +544,25 @@ document.addEventListener("DOMContentLoaded", function () {
       presAnswer = this.value;
       presChecked = true;
       if (orientationChecked && presChecked) {
-        buttonContinueFour.disabled = false;
+        buttonContinueFive.disabled = false;
       }
     });
   }
 
-  survey4.onsubmit = continueForm4;
+  survey5.onsubmit = continueForm5;
 
-  function continueForm4(e) {
+  function continueForm5(e) {
     e.preventDefault();
 
     userSurvey.orientation = orientationAnswer;
     userSurvey.president =  presAnswer;
 
-    document.getElementById("info-survey-four").style.display = "none";
-    document.getElementById("info-survey-five").style.display = "block";
+    document.getElementById("info-survey-five").style.display = "none";
+    document.getElementById("info-survey-six").style.display = "block";
 
-    buttonContinueFour.disabled = true;
-    survey4.style.display = "none";
-    survey5.style.display = "block";
+    buttonContinueFive.disabled = true;
+    survey5.style.display = "none";
+    survey6.style.display = "block";
   }
 
   for (let i = 0; i < discriminationRadios.length; i++) {
@@ -558,7 +579,7 @@ document.addEventListener("DOMContentLoaded", function () {
         econChecked &&
         respectChecked
       ) {
-        buttonContinueFive.disabled = false;
+        buttonContinueSix.disabled = false;
       }
     });
   }
@@ -577,7 +598,7 @@ document.addEventListener("DOMContentLoaded", function () {
         econChecked &&
         respectChecked
       ) {
-        buttonContinueFive.disabled = false;
+        buttonContinueSix.disabled = false;
       }
     });
   }
@@ -596,7 +617,7 @@ document.addEventListener("DOMContentLoaded", function () {
         econChecked &&
         respectChecked
       ) {
-        buttonContinueFive.disabled = false;
+        buttonContinueSix.disabled = false;
       }
     });
   }
@@ -615,7 +636,7 @@ document.addEventListener("DOMContentLoaded", function () {
         econChecked &&
         respectChecked
       ) {
-        buttonContinueFive.disabled = false;
+        buttonContinueSix.disabled = false;
       }
     });
   }
@@ -634,7 +655,7 @@ document.addEventListener("DOMContentLoaded", function () {
         econChecked &&
         respectChecked
       ) {
-        buttonContinueFive.disabled = false;
+        buttonContinueSix.disabled = false;
       }
     });
   }
@@ -653,7 +674,7 @@ document.addEventListener("DOMContentLoaded", function () {
         econChecked &&
         respectChecked
       ) {
-        buttonContinueFive.disabled = false;
+        buttonContinueSix.disabled = false;
       }
     });
   }
@@ -672,14 +693,14 @@ document.addEventListener("DOMContentLoaded", function () {
         econChecked &&
         respectChecked
       ) {
-        buttonContinueFive.disabled = false;
+        buttonContinueSix.disabled = false;
       }
     });
   }
 
-  survey5.onsubmit = continueForm5;
+  survey6.onsubmit = continueForm6;
 
-  function continueForm5(e) {
+  function continueForm6(e) {
     e.preventDefault();
 
     userSurvey.discrimination = discriminationAnswer;
@@ -691,7 +712,7 @@ document.addEventListener("DOMContentLoaded", function () {
     userSurvey.respect = respectAnswer;
 
     buttonContinue.disabled = true;
-    document.getElementById("info-survey-five").style.display = "none";
+    document.getElementById("info-survey-six").style.display = "none";
     document.getElementById("info-form").style.display = "block";
   }
 
