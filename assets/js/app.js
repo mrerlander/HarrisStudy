@@ -719,12 +719,16 @@ document.addEventListener("DOMContentLoaded", function () {
     buttonResubmit.style.display = "block";
     buttonResubmit.innerText = "Loading...";
 
+    userSurvey.age = age;
+    userSurvey.race = race;
+    userSurvey.gender = gender;
+    userSurvey.test = test;
+
     ratingsArr.forEach(function (element) {
       element.age = age;
       element.race = race;
       element.gender = gender;
       element.test = test;
-      element.subjectPool = subjectPool;
     });
 
     buttonSubmit.addEventListener("click", writeToDBs);
