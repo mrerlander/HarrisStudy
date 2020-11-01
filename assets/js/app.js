@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   let warrenPic = "./assets/images/Ewarren_survey.jpg";
-  let harrisPic = "./assets/images/Survey_KH.jpg";
+  let harrisPic = "./assets/images/KHStudy2.jpg";
   let ricePic = "./assets/images/CR_survey.jpg";
 
   let faces = [
