@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let ricePic = "./assets/images/CR_survey.jpg";
 
   let faces = [
-    "./assets/images/PhotoshopKH2.jpg",
+    "./assets/images/KHStudy2.jpg",
     "./assets/images/rsz_1bf225_2.jpg",
     "./assets/images/rsz_1bf254_2.jpg",
     "./assets/images/rsz_1bfage393_2.jpg",
