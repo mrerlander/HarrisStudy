@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", function () {
       harrisChecked = true;
       if (warrenChecked && harrisChecked && riceChecked) {
         buttonContinue.disabled = false;
-      }
+      } 
     });
   }
 
